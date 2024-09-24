@@ -7,16 +7,16 @@ public class StudentService {
     public void add(student student){
         students.add(student);
     }
-    public boolean changeDetailsOfStudent(StudentDto dto){
+    public void changeDetailsOfStudent(StudentDto dto){
         for (int i = 0; i < students.size(); i++) {
             if (Objects.equals(students.get(i).getName(),dto.name())&&
             Objects.equals(students.get(i).getLastName(),dto.lastName())){
                 students.get(i).setBirthday(dto.birthday());
                 students.get(i).setHobbies(dto.hobbies());
-                return true;
+              //  return true;
             }
         }
-        return false;
+       // return false;
     }
     public boolean deleteStudent(StudentDto dto){
         for (int i = 0; i < students.size(); i++) {
