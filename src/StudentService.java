@@ -28,4 +28,31 @@ public class StudentService {
         }
         return false;
     }
+    public student findByName(String name){
+        for (int i = 0; i < students.size(); i++) {
+            if (Objects.equals(students.get(i).getName(),name)){
+               return students.get(i);
+
+            }
+        }
+        return null;
+    }
+    public student findByLastName(String lastName){
+        for (int i = 0; i < students.size(); i++) {
+            if (Objects.equals(students.get(i).getName(),lastName)){
+                return students.get(i);
+
+            }
+        }
+        return null;
+    } public student findByName(List<String> hobbies){
+        for (int i = 0; i < students.size(); i++) {
+            if (Objects.equals(students.get(i).getHobbies(),hobbies)){
+                return students.get(i);
+
+            }
+        }
+        return null;
+    }
+
 }
